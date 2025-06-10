@@ -73,4 +73,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Carregar comentários ao iniciar
   loadComments();
+
+  // Toggle Abas Menu
+  const btn = document.getElementById('toggleAbas');
+  const menu = document.getElementById('abasMenu');
+  let aberto = false;
+  if (btn && menu) {
+    btn.addEventListener('click', function() {
+      aberto = !aberto;
+      menu.style.display = aberto ? 'flex' : 'none';
+      btn.textContent = aberto ? 'Fechar Todas as Abas' : 'Abrir Todas as Abas';
+    });
+  }
 });
